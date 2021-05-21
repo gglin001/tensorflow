@@ -1,0 +1,13 @@
+{
+    "python.pythonPath": "/data/songlin/.miniconda3/envs/py36/bin/python",
+    "git.ignoreLimitWarning": true,
+    "C_Cpp.enhancedColorization": "Enabled",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true,
+        "**/build/**": true,
+        "**/bazel-**/**": true,
+    }
+}
