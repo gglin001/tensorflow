@@ -23,6 +23,14 @@
             "miDebuggerPath": "/usr/bin/gdb",
             "sourceFileMap": {
                 "/proc/self/cwd/tensorflow": "${workspaceFolder}/tensorflow",
+                "/proc/self/cwd/external": "${workspaceFolder}/bazel-tensorflow/external",
+            },
+            // `set auto-solib-add off` in .gdbinit is ignored
+            // https://github.com/microsoft/vscode-cpptools/issues/3324
+            // https://code.visualstudio.com/docs/cpp/launch-json-reference#_symbolloadinfo
+            "symbolLoadInfo": {
+                "loadAll": false,
+                "exceptionList": "libtensorflow_framework.so;"
             },
             "setupCommands": [
                 {
@@ -31,10 +39,19 @@
                     "ignoreFailures": true
                 },
                 {
-                    "description": "Skip stdio-common files",
-                    "text": "-interpreter-exec console \"skip -gfi stdlib/*.c\""
-                }
-            ]
+                    "description": "load .gdbinit",
+                    "text": "source ${workspaceFolder}/.gdbinit"
+                },
+                // {
+                //     "description": "set auto-solib-add off, not ok for vscode",
+                //     "text": "set auto-solib-add off",
+                //     "ignoreFailures": true
+                // },
+            ],
+            // for debuging
+            // "logging": {
+            //     "engineLogging": true
+            // },
         },
     ]
 }

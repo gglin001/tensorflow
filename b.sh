@@ -2,17 +2,16 @@
 ./configure
 
 # quick test debug
-bazel build --copt="-O0" -c dbg //tensorflow/c/kernels:tensor_shape_utils_test
-
-# bazel build \
-#     --config=noaws \
-#     --config=nogcp \
-#     --config=nohdfs \
-#     --config=nonccl \
-#     --config=monolithic \
-#     --config=xla \
-#     --copt="-O0" --copt="-g" --strip=never \
-#     //tensorflow/c/kernels:tensor_shape_utils_test
+# debug tensor_shape_utils_test for test
+bazel build \
+    --config=noaws \
+    --config=nogcp \
+    --config=nohdfs \
+    --config=nonccl \
+    --config=monolithic \
+    --config=xla \
+    --copt="-O0" -c dbg \
+    //tensorflow/c/kernels:tensor_shape_utils_test
 
 # build tf in debug without compile_commands.json
 # if raise Undefined symbol see

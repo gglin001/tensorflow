@@ -9,5 +9,10 @@
         "**/.hg/store/**": true,
         "**/build/**": true,
         "**/bazel-**/**": true,
-    }
+    },
+    // plance is not ok ...
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/bazel-bin/tensorflow/tools/pip_package/build_pip_package.runfiles/org_tensorflow"
+    ],
+    "python.analysis.autoImportCompletions": false
 }
