@@ -1,0 +1,7 @@
+compile_commands.json
+
+"file": "
+
+-->
+
+"file": "/data/songlin/repos/tensorflow/bazel-tensorflow/
