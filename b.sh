@@ -11,7 +11,7 @@ bazel build \
     --config=monolithic \
     --config=xla \
     --copt="-O0" -c dbg \
-    //tensorflow/c/kernels:tensor_shape_utils_test
+    //tensorflow/examples/adding_an_op:attr_examples
 
 # build tf in debug without compile_commands.json
 # if raise Undefined symbol see

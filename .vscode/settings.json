@@ -1,17 +1,11 @@
 {
-    "python.pythonPath": "/data/songlin/.miniconda3/envs/py36/bin/python",
-    "git.ignoreLimitWarning": true,
-    "C_Cpp.enhancedColorization": "Enabled",
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true,
-        "**/.hg/store/**": true,
-        "**/build/**": true,
-        "**/bazel-**/**": true,
-    },
+    "python.pythonPath": "/Users/allen/opt/miniconda3/envs/py36/bin/python",
     "python.analysis.extraPaths": [
-        // pylance workable for `import org_tensorflow.tensorflow as tf`
-        "${workspaceFolder}/bazel-bin/tensorflow/tools/pip_package/build_pip_package.runfiles"
+        // pylance workable for `import tensorflow as tf`
+        "${workspaceFolder}/bazel-bin/tensorflow/tools/pip_package/build_pip_package.runfiles/org_tensorflow"
+    ],
+    "clangd.arguments": [
+        "--compile-commands-dir",
+        "/Users/allen/gglin001/tensorflow/demos"
     ]
 }
