@@ -49,3 +49,4 @@ Pods
 xcuserdata
 
 *.cache/
+demos/compile_commands.json

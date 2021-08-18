@@ -7,5 +7,20 @@
     "clangd.arguments": [
         "--compile-commands-dir",
         "/Users/allen/gglin001/tensorflow/demos"
-    ]
+    ],
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/bazel-bin/tensorflow/tools/pip_package/build_pip_package.runfiles/org_tensorflow"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/bazel-bin/tensorflow/tools/pip_package/build_pip_package.runfiles/org_tensorflow"
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/.hg/store/**": true,
+        "**/bazel-**/**": true
+    },
+    "git.ignoreLimitWarning": true,
+    "git.autoRepositoryDetection": false
 }
