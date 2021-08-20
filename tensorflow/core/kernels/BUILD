@@ -1,4 +1,6 @@
-load("//tensorflow/core/platform:rules_cc.bzl", "cc_library")
+# load("//tensorflow/core/platform:rules_cc.bzl", "cc_library")
+load("@rules_cc//cc:defs.bzl","cc_library")
+
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
 load(
     "//tensorflow:tensorflow.bzl",

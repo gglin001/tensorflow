@@ -460,7 +460,7 @@ def tf_gen_op_libs(
     if not deps:
         deps = []
     for n in op_lib_names:
-        cc_library(
+        native.cc_library(
             name = n + "_op_lib",
             copts = tf_copts(is_external = is_external),
             srcs = [sub_directory + n + ".cc"],
@@ -1451,7 +1451,7 @@ def tf_gpu_library(deps = None, cuda_deps = None, copts = tf_copts(), **kwargs):
 
     kwargs["features"] = kwargs.get("features", []) + ["-use_header_modules"]
     deps = deps + if_cuda_or_rocm(cuda_deps)
-    cc_library(
+    native.cc_library(
         deps = deps + if_cuda([
             clean_dep("//tensorflow/stream_executor/cuda:cudart_stub"),
             "@local_config_cuda//cuda:cuda_headers",
@@ -1608,7 +1608,7 @@ def tf_mkl_kernel_library(
     # -fno-exceptions in nocopts breaks compilation if header modules are enabled.
     disable_header_modules = ["-use_header_modules"]
 
-    cc_library(
+    native.cc_library(
         name = name,
         srcs = if_mkl(srcs),
         hdrs = hdrs,

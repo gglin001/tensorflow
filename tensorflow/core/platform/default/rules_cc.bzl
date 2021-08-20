@@ -12,8 +12,24 @@ load(
     _cc_shared_library = "cc_shared_library",
 )
 
-cc_binary = _cc_binary
+def cc_binary(
+        copts = [],
+        **kwargs):
+    return _cc_binary(
+        copts = copts + ["-g -O0"],
+        **kwargs
+    )
+
+def cc_library(
+        copts = [],
+        **kwargs):
+    return _cc_library(
+        copts = copts + ["-g -O0"],
+        **kwargs
+    )
+
+# cc_binary = _cc_binary
 cc_import = _cc_import
-cc_library = _cc_library
+# cc_library = _cc_library
 cc_shared_library = _cc_shared_library
 cc_test = _cc_test

@@ -12,10 +12,14 @@ bazel build \
   --config=nohdfs \
   --config=nonccl \
   --config=xla \
-  -c opt \
+  --define=enable_mkl=false \
+  --strip="never" \
+  --spawn_strategy=local \
   --experimental_action_listener=//third_party/tools/generate_compile_commands:extract_json \
-  //tensorflow/examples/adding_an_op:attr_examples
+  //tensorflow/examples/label_image:label_image
 
+# //tensorflow/examples/adding_an_op:attr_examples
+# //tensorflow/core/platform/testdata:test_echo
 
 pushd $(bazel info execution_root) >/dev/null
 echo "[" >compile_commands.json
