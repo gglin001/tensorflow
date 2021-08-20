@@ -6,7 +6,7 @@
     ],
     "clangd.arguments": [
         "--compile-commands-dir",
-        "/Users/allen/gglin001/tensorflow/demos"
+        "${workspaceFolder}/demos"
     ],
     "terminal.integrated.env.osx": {
         "PYTHONPATH": "${workspaceFolder}/bazel-bin/tensorflow/tools/pip_package/build_pip_package.runfiles/org_tensorflow"
