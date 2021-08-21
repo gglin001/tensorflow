@@ -1,7 +1,9 @@
 # Description:
 #   XLA service implementation.
 
-load("//tensorflow/core/platform:rules_cc.bzl", "cc_library")
+# load("//tensorflow/core/platform:rules_cc.bzl", "cc_library")
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
 load("//tensorflow/compiler/xla/tests:build_defs.bzl", "xla_test")
 load(
     "//tensorflow/core/platform:build_config.bzl",

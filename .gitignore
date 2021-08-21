@@ -50,3 +50,8 @@ xcuserdata
 
 *.cache/
 demos/compile_commands.json
+
+tensorflow/_api/
+demos/
+
+tensorflow/examples/label_image/data/*

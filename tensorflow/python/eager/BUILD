@@ -20,6 +20,8 @@ load(
     "tf_additional_rpc_deps",
 )
 
+load("//tensorflow/core/platform:rules_cc.bzl", "cc_library")
+
 package(
     licenses = ["notice"],
 )
